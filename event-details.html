@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails - EventSphere</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">EventSphere</div>
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="events.html">Événements</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Zone vide remplie dynamiquement par le JavaScript (script.js) -->
+    <main id="event-content"></main>
+
+    <!-- Bouton d'accessibilité audio -->
+    <div class="accessibility-tool" style="position: fixed; bottom: 80px; right: 30px; z-index: 1000;">
+        <button id="audio-desc" class="btn-audio" 
+                style="width: 60px; height: 60px; border-radius: 50%; border: none; background: #2563eb; color: white; font-size: 1.5rem; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: 0.3s;"
+                title="Écouter le contenu">
+            🔊
+        </button>
+    </div>
+
+    <footer>
+        <p>© 2026 EventSphere - Tous droits réservés</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

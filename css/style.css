@@ -1,0 +1,71 @@
+/* --- VARIABLES --- */
+:root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-soft: #dbeafe;
+    --bg-light: #f8fafc;
+    --white: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --shadow: 0 4px 6px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+/* --- DARK MODE (Préférences système) --- */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-light: #0f172a;
+        --white: #1e293b;
+        --text-dark: #f8fafc;
+        --text-muted: #94a3b8;
+    }
+    input, textarea {
+        background: #1e293b !important;
+        border-color: #334155 !important;
+        color: white;
+    }
+}
+
+/* --- STRUCTURE MOBILE-FIRST --- */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+body { 
+    display: flex; 
+    flex-direction: column; 
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1.5rem 5%; /* Padding réduit pour mobile */
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Ajustement pour Desktop (Tablettes et +) */
+@media (min-width: 768px) {
+    main {
+        padding: 2rem 8%; /* On redonne de l'espace sur grand écran */
+    }
+}
+
+footer {
+    flex-shrink: 0;
+    background: #0f172a;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}

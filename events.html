@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements - EventSphere</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">EventSphere</div>
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="events.html">Événements</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="events-section">
+            <!-- Boutons pour filtrer les événements par catégorie -->
+            <div class="filter-container" style="text-align: center; margin-bottom: 2rem;">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="tech">Conférences</button>
+                <button class="filter-btn" data-filter="jazz">Concerts</button>
+            </div>
+
+            <!-- Grille des cartes d'événements -->
+            <div class="event-grid" id="event-grid">
+                <!-- Événement Tech -->
+                <article class="card" data-category="tech">
+                    <div class="card-image-wrapper">
+                        <img src="images/Tech-Conferences-2026.webp" alt="Tech">
+                    </div>
+                    <div class="card-body">
+                        <h3>Conférence Web</h3>
+                        <p>Maîtrisez les dernières tendances du design.</p>
+                        <!-- Lien avec paramètre pour charger les bonnes infos dans event-details.html -->
+                        <a href="event-details.html?type=tech" class="btn-primary">Détails</a>
+                    </div>
+                </article>
+
+                <!-- Événement Jazz -->
+                <article class="card" data-category="jazz">
+                    <div class="card-image-wrapper">
+                        <img src="images/Jazz-Concert.webp" alt="Jazz">
+                    </div>
+                    <div class="card-body">
+                        <h3>Concert de Jazz</h3>
+                        <p>Une expérience acoustique rare à Lyon.</p>
+                        <a href="event-details.html?type=jazz" class="btn-primary">Détails</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 EventSphere</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

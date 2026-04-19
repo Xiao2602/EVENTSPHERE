@@ -1,0 +1,70 @@
+/* --- HEADER --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 900;
+    color: var(--primary);
+    text-transform: uppercase;
+}
+
+/* Navigation Mobile par défaut (cachée si pas de menu burger actif) */
+.nav {
+    display: none; 
+    gap: 1.5rem;
+}
+
+/* --- GRILLES MOBILE-FIRST --- */
+
+/* Événements : 1 colonne par défaut */
+.event-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Contact : 1 colonne par défaut */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* Formulaire : lignes simples par défaut */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* --- PASSAGE EN DESKTOP (Ajustements) --- */
+@media (min-width: 768px) {
+    .header { padding: 1.25rem 8%; }
+    .logo { font-size: 1.5rem; }
+    .nav { display: flex; gap: 2.5rem; } /* On affiche la nav classique */
+    
+    .event-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur desktop */
+        gap: 2.5rem;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr 1fr; /* 2 colonnes sur desktop */
+        gap: 4rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr 1fr; /* Prénom/Nom côte à côte */
+        gap: 2.5rem;
+    }
+}

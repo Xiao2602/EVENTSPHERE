@@ -1,0 +1,14 @@
+/* Pour les tablettes (petits écrans) */
+@media (max-width: 1024px) {
+    .contact-grid, .footer-grid {
+        grid-template-columns: 1fr; /* On passe sur une seule colonne */
+        gap: 2rem;
+    }
+}
+
+/* Pour les mobiles */
+@media (max-width: 768px) {
+    .form-row, .event-grid {
+        grid-template-columns: 1fr; /* Tout s'empile verticalement */
+    }
+}

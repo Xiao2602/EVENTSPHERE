@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - EventSphere</title>
+    <!-- Importation des feuilles de style -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <header class="header">
+        <div class="logo">EventSphere</div>
+        <nav class="nav">
+            <a href="index.html">Accueil</a>
+            <a href="events.html">Événements</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="contact-page">
+        <div class="contact-grid">
+            <!-- Texte informatif à gauche -->
+            <div class="contact-info">
+                <h1>Parlons de votre prochain projet</h1>
+                <p class="subtitle">Une question ? Une suggestion ? Notre équipe vous répond en moins de 24h.</p>
+                
+                <div class="info-block">
+                    <h4>Adresse</h4>
+                    <p>📍 12 rue du Web, Paris</p>
+                </div>
+            </div>
+            
+            <!-- Formulaire de contact à droite -->
+            <form class="contact-form">
+                <div class="form-row">
+                    <input type="text" placeholder="Prénom" required>
+                    <input type="text" placeholder="Nom" required>
+                </div>
+                <input type="email" placeholder="Email" class="full-width" required>
+                <textarea placeholder="Votre message" rows="6" required></textarea>
+                <button type="submit" class="btn-submit">Envoyer le message</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- Bouton flottant pour la lecture audio du texte -->
+    <button id="audio-desc" class="btn-audio" style="position:fixed; bottom:80px; right:30px; width:60px; height:60px; border-radius:50%; border:none; background:#2563eb; color:white; cursor:pointer; font-size:1.5rem; z-index:1000;">🔊</button>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>© 2026 EventSphere - Tous droits réservés</p>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
